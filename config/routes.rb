@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   
+  get "show_pass" => "words#show_pass", :as => "show_pass"
+  
+  resources :words
   
   root 'home#index'
   

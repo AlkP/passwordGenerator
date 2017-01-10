@@ -1,3 +1,10 @@
 %h1 Генератор паролей
 %p 
 
+= form_for @word, :remote => true do |f|
+  = f.text_field :title
+  = f.submit value: "Добавить слово", remote: true
+%p ==
+= link_to 'Получить пароли', show_pass_path, :remote => true
+
+.for-response 
